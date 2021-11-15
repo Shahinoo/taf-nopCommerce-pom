@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="nopCommerce Regression Suite">
+    <parameter name="browser" value="aaa"></parameter>
+    <test verbose="2" preserve-order="true" name="Regression">
+        <classes>
+            <class name="scripts.MyAccountTest">
+            </class>
+        </classes>
+    </test>
+</suite>
