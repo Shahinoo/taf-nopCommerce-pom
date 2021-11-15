@@ -3,10 +3,9 @@ package scripts;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
+import utilities.Helper;
 
 import java.util.concurrent.TimeUnit;
 
@@ -37,5 +36,17 @@ public class TestBase {
     @AfterSuite
     public void stopDriver() {
         driver.close();
+    }
+
+    // take screenshot when tc fail and add it in the screenshot directory
+    // use ITestResult which return results of the method from TestNG
+    @AfterMethod
+
+    public void screenshotOnFailure(ITestResult result) {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            System.out.println("Failed");
+            System.out.println("Taking Screenshot .....");
+            Helper.captureScreenshot(driver, result.getName());
+        }
     }
 }
