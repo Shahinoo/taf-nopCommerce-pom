@@ -13,7 +13,7 @@ public class MyAccountTest extends TestBase {
     MyAccountPage myAccountPage;
     HomePage homePage;
 
-    String email = "testemail021@gmail.com";
+    String email = "testemail024@gmail.com";
     String password = "FnopC@000";
     String newPassword = "Fcoral@00000";
 

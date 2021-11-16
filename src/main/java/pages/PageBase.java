@@ -8,7 +8,7 @@ import java.security.ProtectionDomain;
 
 public class PageBase {
 
-    protected WebDriver driver;
+    //protected WebDriver driver;
 
     /**
      * create a constructor using PageFactory Class to Processes all the annotated WebElements

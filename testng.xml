@@ -2,10 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="nopCommerce Regression Suite">
     <parameter name="browser" value="aaa"></parameter>
-    <test verbose="2" preserve-order="true" name="Regression">
+
+    <test verbose="2" preserve-order="false" name="Regression">
         <classes>
-            <class name="scripts.MyAccountTest">
-            </class>
+            <class name="scripts.UserRegistrationTest"></class>
+            <class name="scripts.MyAccountTest"></class>
+            <class name="scripts.SearchTest"></class>
+
         </classes>
     </test>
 </suite>
