@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SearchDetails extends PageBase {
+public class SearchDetailsPage extends PageBase {
 
-    public SearchDetails(WebDriver driver) {
+    public SearchDetailsPage(WebDriver driver) {
         super(driver);
     }
 
