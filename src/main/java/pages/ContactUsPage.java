@@ -22,12 +22,12 @@ public class ContactUsPage extends PageBase {
     WebElement submitBtn;
 
     @FindBy(css = "div.result")
-    WebElement enquirySuccessMessage;
+    public WebElement enquirySuccessMessage;
 
     public void contactUs(String name, String email, String message) {
-        setText(urNameTxtBox,name);
-        setText(urEmailTxtBox,email);
-        setText(enquiryTxtBox,message);
+        setText(urNameTxtBox, name);
+        setText(urEmailTxtBox, email);
+        setText(enquiryTxtBox, message);
         clickButton(submitBtn);
     }
 }

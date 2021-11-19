@@ -11,10 +11,14 @@ public class SearchDetailsPage extends PageBase {
     }
 
     @FindBy(linkText = "Apple MacBook Pro 13-inch")
-    public WebElement prodResultAppleMac;
+    public WebElement prodResultAppleMacLink;
     @FindBy(linkText = "Apple iCam")
-    public WebElement prodResultAppleCam;
+    public WebElement prodResultAppleCamLink;
 
     @FindBy(css = "h1")
-    public WebElement prodAppleMacDetails;
+    public WebElement prodAppleMacTitles;
+    @FindBy (css = "span#price-value-17")
+    public  WebElement productPriceSign;
+
+
 }
