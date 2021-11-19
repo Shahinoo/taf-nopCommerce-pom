@@ -17,11 +17,11 @@ public class SearchTest extends TestBase {
 
         searchPage.searchForProduct(productName);
         // Verify
-        System.out.println(searchDetailsPage.prodResultAppleCam.getText());
-        System.out.println(searchDetailsPage.prodResultAppleMac.getText());
+        System.out.println(searchDetailsPage.prodResultAppleCamLink.getText());
+        System.out.println(searchDetailsPage.prodResultAppleMacLink.getText());
         // Assert
-        Assert.assertEquals("Apple iCam", searchDetailsPage.prodResultAppleCam.getText());
-        Assert.assertEquals("Apple MacBook Pro 13-inch", searchDetailsPage.prodResultAppleMac.getText());
+        Assert.assertEquals("Apple iCam", searchDetailsPage.prodResultAppleCamLink.getText());
+        Assert.assertEquals("Apple MacBook Pro 13-inch", searchDetailsPage.prodResultAppleMacLink.getText());
     }
 
     @Test
@@ -31,9 +31,9 @@ public class SearchTest extends TestBase {
 
         searchPage.searchAutoComplete(productName);
         // Verify
-        System.out.println(searchDetailsPage.prodAppleMacDetails.getText());
+        System.out.println(searchDetailsPage.prodAppleMacTitles.getText());
         // Assert
-        Assert.assertEquals("Apple MacBook Pro 13-inch", searchDetailsPage.prodAppleMacDetails.getText());
+        Assert.assertEquals("Apple MacBook Pro 13-inch", searchDetailsPage.prodAppleMacTitles.getText());
 
     }
 }

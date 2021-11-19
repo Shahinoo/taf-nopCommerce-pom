@@ -25,11 +25,11 @@ public class ChangeCurrencyTest extends TestBase {
 
         searchPage.searchAutoComplete(productName);
         // Verify
-        System.out.println(searchDetailsPage.prodAppleMacDetails.getText());
-        System.out.println(searchDetailsPage.productPrice.getText());
+        System.out.println(searchDetailsPage.prodAppleMacTitles.getText());
+        System.out.println(searchDetailsPage.productPriceSign.getText());
         // Assert
-        Assert.assertTrue(searchDetailsPage.prodAppleMacDetails.getText().contains("Apple"));
+        Assert.assertTrue(searchDetailsPage.prodAppleMacTitles.getText().contains("Apple"));
         // Assert that Currency is changed to Euro
-        Assert.assertTrue(searchDetailsPage.productPrice.getText().contains("€"));
+        Assert.assertTrue(searchDetailsPage.productPriceSign.getText().contains("€"));
     }
 }

@@ -31,6 +31,8 @@ public class HomePage extends PageBase {
     WebElement registerLink;
     @FindBy(css = ".ico-login")
     WebElement loginLink;
+    @FindBy(css = "span.wishlist-label")
+    WebElement wishlistLink;
     @FindBy(linkText = "Contact us")
     WebElement contactUsLink;
 
