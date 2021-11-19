@@ -17,4 +17,6 @@ public class SearchDetailsPage extends PageBase {
 
     @FindBy(css = "h1")
     public WebElement prodAppleMacDetails;
+    @FindBy (css = "span#price-value-17")
+    public  WebElement productPrice;
 }

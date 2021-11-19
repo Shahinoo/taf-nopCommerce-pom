@@ -39,7 +39,7 @@ public class HomePage extends PageBase {
         clickButton(contactUsLink);
     }
 
-    public void selectDropDownList() {
+    public void changeCurrency() {
         select = new Select(currencyDDL);
         select.selectByVisibleText("Euro");
     }
