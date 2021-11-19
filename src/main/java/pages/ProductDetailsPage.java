@@ -17,6 +17,18 @@ public class ProductDetailsPage extends PageBase {
     @FindBy(xpath = "//div[@class='email-a-friend']")
     WebElement emailAFriendBtn;
 
-    @FindBy(css = "..content")
-    WebElement notificationBarSuccessMessage;
+    @FindBy(css = "p.content")
+    public WebElement notificationBarSuccessMessage;
+
+    public void AddToWishlist() {
+        clickButton(addToWishlistBtn);
+    }
+
+    public void compareList() {
+        clickButton(addToCompareListBtn);
+    }
+
+    public void emailAFriend() {
+        clickButton(emailAFriendBtn);
+    }
 }

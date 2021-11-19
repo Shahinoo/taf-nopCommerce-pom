@@ -31,7 +31,7 @@ public class HomePage extends PageBase {
     WebElement registerLink;
     @FindBy(css = ".ico-login")
     WebElement loginLink;
-    @FindBy(css = "span.wishlist-label")
+    @FindBy(linkText = "wishlist")
     WebElement wishlistLink;
     @FindBy(linkText = "Contact us")
     WebElement contactUsLink;
@@ -42,6 +42,10 @@ public class HomePage extends PageBase {
 
     public void openLoginPage() {
         clickButton(loginLink);
+    }
+
+    public void openWishlistPage() {
+        clickButton(wishlistLink);
     }
 
     public void openContactUsPage() {
