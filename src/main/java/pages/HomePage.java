@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.idealized.Javascript;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
@@ -16,11 +17,13 @@ public class HomePage extends PageBase {
         javascriptExecutor = (JavascriptExecutor) driver;
     }
 
+    @FindBy(id = "customerCurrency")
+    public WebElement currencyDDL;
     @FindBy(css = ".ico-register")
     WebElement registerLink;
     @FindBy(css = ".ico-login")
     WebElement loginLink;
-    @FindBy (linkText = "Contact us")
+    @FindBy(linkText = "Contact us")
     WebElement contactUsLink;
 
     public void openRegistrationPage() {
@@ -35,5 +38,11 @@ public class HomePage extends PageBase {
         scrollToBottom();
         clickButton(contactUsLink);
     }
+
+    public void selectDropDownList() {
+        select = new Select(currencyDDL);
+        select.selectByVisibleText("Euro");
+    }
+
 
 }

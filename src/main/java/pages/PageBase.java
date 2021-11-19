@@ -4,6 +4,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import java.security.ProtectionDomain;
 
@@ -11,6 +12,7 @@ public class PageBase {
 
     //protected WebDriver driver;
     public JavascriptExecutor javascriptExecutor;
+    public Select select;
 
     /**
      * create a constructor using PageFactory Class to Processes all the annotated WebElements
@@ -33,4 +35,5 @@ public class PageBase {
     public void scrollToBottom() {
         javascriptExecutor.executeScript("scrollBy(0,2500)");
     }
+
 }
