@@ -20,6 +20,8 @@ public class HomePage extends PageBase {
     WebElement registerLink;
     @FindBy(css = ".ico-login")
     WebElement loginLink;
+    @FindBy (linkText = "Contact us")
+    WebElement contactUsLink;
 
     public void openRegistrationPage() {
         clickButton(registerLink);
@@ -29,8 +31,9 @@ public class HomePage extends PageBase {
         clickButton(loginLink);
     }
 
-    public void openContactUsPAge() {
+    public void openContactUsPage() {
         scrollToBottom();
+        clickButton(contactUsLink);
     }
 
 }

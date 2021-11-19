@@ -31,6 +31,6 @@ public class PageBase {
     }
 
     public void scrollToBottom() {
-        javascriptExecutor.executeScript("scrollBy(0.2500)");
+        javascriptExecutor.executeScript("scrollBy(0,2500)");
     }
 }
